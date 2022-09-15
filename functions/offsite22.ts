@@ -24,7 +24,6 @@ export const handler = async (event: HandlerEvent) => {
     try {
         const timeslot = event?.queryStringParameters?.schedule || 'thu_3pm';
 
-
         return {
             statusCode: 200,
             body: JSON.stringify({ message: schedulePlan(timeslot) }),
