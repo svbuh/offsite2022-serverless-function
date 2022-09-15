@@ -11,7 +11,7 @@ function schedulePlan(timeslot: string): string {
         case 'fri_5:30pm':
             return `Team photo!`;
 
-        case 'sat_07:30am':
+        case 'sat_7:30am':
             return `Breakfast @SeaPoint`;
 
         // this is not reachable due to TS checks
