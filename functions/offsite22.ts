@@ -2,6 +2,9 @@ import { HandlerEvent } from '@netlify/functions';
 
 function schedulePlan(timeslot: string): string {
     switch (timeslot) {
+        case 'default':
+            return `4E Offsite 2022 - Welcome!`;
+
         case 'thu_3pm':
             return `Welcome! It's time to check-in`;
 
@@ -22,7 +25,7 @@ function schedulePlan(timeslot: string): string {
 
 export const handler = async (event: HandlerEvent) => {
     try {
-        const timeslot = event?.queryStringParameters?.schedule || 'thu_3pm';
+        const timeslot = event?.queryStringParameters?.timeslot || 'default';
 
         return {
             statusCode: 200,
